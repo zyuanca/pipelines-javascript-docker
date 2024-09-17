@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: zyuancapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zyuancapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: zyuancapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: zyuancapipelinesjavascriptdocker 
+          image: zyuanca2containerregistry.azurecr.io/zyuancapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
